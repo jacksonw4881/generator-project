@@ -3,17 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Template</title>
+    <title>Report Card Generator</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
-        $(function(){
-
-        });
-    </script>
+    $(function() {
+      $('#button').click(function() {
+          $('div').fadeIn();
+        var name = $('#name').val();
+        var name1 = $('#name1').val();
+        var email = "Email: " + $('#email').val();
+        var website = $('#website').val();
+        var address = $('#address').val();
+        var occupation = $('#occupation').val();
+        var phone = "Phone: " + $('#phone').val();
+        var company = $('#company').val();
+        var color = $('#color').val();
+        var fontStyle = $('select').val();
+        $('.name').html(name).css('color', color, );
+        $('.occupation').html(occupation).css('color', color);
+        $('.email').html(email).css('color', color);
+        $('.website').html(website).css('color', color);
+        $('.address').html(address).css('color', color);
+        $('.phone').html(phone).css('color', color);
+        $('.company').html(company).css('color', color);
+      });
+    });
+  </script>
 </head>
 
 <body>
-<h1><center>Business card</center></h1>
+
+  Name: <input type=name id="name" required><br> Occupation:
+  <input id="occupation"><br>Email: <input id="email" required><br> Website: <input id="website"><br> Address: <input id="address"><br> Phone Number: <input id="phone" required> <br>  Company Name: <input id="company"><br> Text Color: <input id="color">
+  <br>
+  <button id="button">Generate Your Business Card!</button> <br>
+
+  <div>
+    <h1 class="name"></h1>
+    <h1 class="company"></h1>
+    <span class="occupation"></span>
+    <span class="email"></span>
+    <span class="phone"></span>
+    <span class="address"></span>
+    <span class="website"></span>
+  </div>
 </body>
 
 </html>
